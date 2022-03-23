@@ -1,4 +1,5 @@
 
+
 grid = [[8, 2, 22, 97, 38, 15, 0, 40, 0, 75, 4, 5, 7, 78, 52, 12, 50, 77, 91, 8],
 [49, 49, 99, 40, 17, 81, 18, 57, 60, 87, 17, 40, 98, 43, 69, 48, 4, 56, 62, 0],
 [81, 49, 31, 73, 55, 79, 14, 29, 93, 71, 40, 67, 53, 88, 30, 3, 49, 13, 36, 65],
@@ -19,42 +20,3 @@ grid = [[8, 2, 22, 97, 38, 15, 0, 40, 0, 75, 4, 5, 7, 78, 52, 12, 50, 77, 91, 8]
 [20, 69, 36, 41, 72, 30, 23, 88, 34, 62, 99, 69, 82, 67, 59, 85, 74, 4, 36, 16],
 [20, 73, 35, 29, 78, 31, 90, 1, 74, 31, 49, 71, 48, 86, 81, 16, 23, 57, 5, 54],
 [1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48]]
-
-
-#Make a loop that does horizontal checks
-product_max = 0
-for i in range(0, 17):
-    for g in range(0, 17):
-        product = 1
-        for s in range(4):
-            product *= grid[i][g+s]
-        if product > product_max:
-            product_max = product
-
-#Loop for vertical
-for g in range(0, 17):
-    for i in range(0, 17):
-        product = 1
-        for s in range(4):
-            product *= grid[i][g+s]
-        if product > product_max:
-            product_max = product
-
-#Diagonal \
-for i in range(0, 17):
-    for g in range(0, 17):
-        product = 1
-        for s in range(4):
-            product *= grid[i+s][g+s]
-        if product > product_max:
-            product_max = product
-
-#Diagonal /
-for i in range(0, 17):
-    for g in range(0, 17):
-        product = 1
-        for s in range(4):
-            product *= grid[i+3-s][g+s]
-        if product > product_max:
-            product_max = product
-print(product_max)

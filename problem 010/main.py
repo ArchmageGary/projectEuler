@@ -7,7 +7,6 @@ from libraries.myLibrary import prime_check, coprime_check
 d = 110000
 basis_size = 3
 
-
 #Generates basis
 basis = []
 x = 1
@@ -20,7 +19,6 @@ while len(basis) < basis_size:
 x = 1
 for i in basis:
     x *= i
-
 
 #Generate primes under 2x
 prime_sum = 0

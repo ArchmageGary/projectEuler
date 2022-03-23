@@ -18,4 +18,4 @@ import time
 tic = time.perf_counter()
 
 toc = time.perf_counter()
-print(f"Performed in {toc - tic:0.f4} seconds")
+print(f"Performed in {toc - tic:.4f} seconds")

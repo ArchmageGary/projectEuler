@@ -1,6 +1,14 @@
 
-from libraries.myLibrary import prime_check, coprime_check
+from libraries.myLibrary import prime_check
 
+import time
+tic = time.perf_counter()
+
+def coprime_check(basis, x):
+    for i in basis:
+        if x%i == 0:
+            return False
+    return True
 
 # d is the number not to be exceeded. p is the size of our basis of wheel factorization. Larger numbers should reduce computational complexity.
 
@@ -43,3 +51,7 @@ while n < d:
             prime_sum += n
     g += 1
 print(prime_sum)
+
+
+toc = time.perf_counter()
+print(f"Performed in {toc - tic:.4f} seconds")

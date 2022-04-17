@@ -1,5 +1,7 @@
 
-from libraries.myLibrary import prime_check
+import sys
+sys.path.append("C://Users//jrpyles//Desktop//projectEuler//libraries")
+from myLibrary import prime_check
 
 import time
 tic = time.perf_counter()
